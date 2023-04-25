@@ -1,0 +1,31 @@
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #161B22;
+    padding: 15px;
+}
+
+.nav_title {
+    padding-left: 10px;
+}
+
+.nav_home{
+    text-decoration-line: none;
+}
+
+.nav_webName {
+    color: white;
+    font-size: 3vmax;
+    font-weight: 600;
+}
+
+.nav_list{
+    padding-right: 10px;
+}
+
+.nav_more{
+    color: white;
+    font-size: 3vmax;
+    font-weight: 600;
+}
