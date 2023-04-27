@@ -29,3 +29,12 @@
     font-size: 3vmax;
     font-weight: 600;
 }
+
+@media (min-width:768px) {
+    .nav_webName{
+        font-size: 3vh;
+    }    
+    .nav_more{
+        font-size: 3vh;
+    }
+}

@@ -10,7 +10,7 @@ function List({ name }) {
         return (
             <li className='list_line'>
                 <a className='list_link' href={path + name}>
-                    <svg className='video_svg' width="3vmax" height="3vmax" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <svg className='video_svg' width="25px" height="25px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <path d="M432 356.16A32 32 0 0 0 384 384v256a32 32 0 0 0 48 27.84l224-128a32 32 0 0 0 0-55.68z m16 228.48v-145.6L576 512z" fill="#ffffff" />
                         <path d="M864 32H160a128 128 0 0 0-128 128v704a128 128 0 0 0 128 128h704a128 128 0 0 0 128-128v-128H96V288h896V160a128 128 0 0 0-128-128z m-96 768h160v64a64 64 0 0 1-64 64h-96z m-224 0h160v128h-160z m-224 0h160v128h-160z m-64 0v128H160a64 64 0 0 1-64-64v-64zM256 224H96V160a64 64 0 0 1 64-64h96z m224 0h-160V96h160z m224 0h-160V96h160z m224 0h-160V96h96a64 64 0 0 1 64 64z" fill="#ffffff" />
                         <path d="M960 384m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z" fill="#ffffff" />
@@ -24,7 +24,7 @@ function List({ name }) {
         return (
             <li className='list_line'>
                 <a className='list_link' href={path + name}>
-                    <svg className='video_svg' width="3vmax" height="3vmax" fill="#ffffff" version="1.1" id="Layer_1"
+                    <svg className='video_svg' width="25px" height="25px" fill="#ffffff" version="1.1" id="Layer_1"
                         viewBox="0 0 491.52 491.52" >
                         <g>
                             <g>
@@ -82,7 +82,7 @@ export default function VideoList() {
         <div className='video_list'>
             <div id="listBox">
                 <a className='back_link' href="../">
-                    <svg className='gotoback' fill="#ffffff" width="3vmax" height="3vmax" version="1.1"
+                    <svg className='gotoback' fill="#ffffff" width="25px" height="25px" version="1.1"
                         viewBox="0 0 240.877 240.877">
                         <g>
                             <g id="First_Page">

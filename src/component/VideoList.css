@@ -1,17 +1,17 @@
 .video_list {
     padding-top: 4vmax;
-    overflow-y: scroll;
+    padding-bottom: 20vh;
 }
 
-#listBox{
+#listBox {
     width: 80vw;
+    max-width: 430px;
     margin: auto;
 }
 
 .list_box {
-    margin: 10px 0;
+    margin: 10px auto;
     padding: 0;
-    max-width: 500px;
     list-style: none;
     border-width: 2px;
     border-style: solid;
@@ -44,7 +44,7 @@
 }
 
 .video_svg {
-    padding: 1vmax;
+    padding: 8px;
     flex: 0 0 auto;
 }
 
@@ -53,15 +53,27 @@
     font-size: 16px;
     text-align: center;
     word-break: break-all;
-    padding:5px;
+    padding: 5px;
 }
 
-.back_link{
+.back_link {
     display: inline-flex;
     text-decoration-line: none;
 }
 
-.back{
-    color:white;
+.back {
+    color: white;
     padding-left: 10px;
+}
+
+@media (min-width:768px) {
+    #listBox {
+        width: 80vw;
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .video_svg {
+        padding: 15px;
+    }
 }

@@ -44,6 +44,7 @@ export default function Video() {
     const [name, setName] = useState("")
     const [preurl, setPreurl] = useState("")
     const [nexturl, setNexturl] = useState("")
+    const [size,setSize]=useState(80)
     const [list, setList] = useState([])
 
     useEffect(() => {
@@ -78,6 +79,10 @@ export default function Video() {
                 console.debug(error);
             }
         })();
+        const size = localStorage.getItem("size")
+        if(size){
+            setSize(localStorage.getItem("size"))
+        }
 
         return () => controller.abort();
     }, [baseurl])
@@ -91,7 +96,7 @@ export default function Video() {
         setNexturl(index < videos.length - 1 ? baseurl + videos[index + 1] : "")
         setList(baseurl)
     }, [videos])
-
+    console.log(toString(size)+'vh')
     return (
         <div className='video_page'>
             <h2 className='video_title'>{name}</h2>
@@ -99,7 +104,8 @@ export default function Video() {
                 <ReactPlayer
                     className='react-player'
                     url={url}
-                    width='80vw'
+                    width={size.toString()+'vw'}
+                    height="auto"
                     playing={false}
                     muted={false}
                     controls={true}
@@ -107,6 +113,18 @@ export default function Video() {
                     pip={true}
                 />
             </div>
+            <input
+            type='range'
+            min="0"
+            max="100"
+            step="1"
+            value={size}
+            onChange={e=>{
+                setSize(e.target.value)
+                localStorage.setItem("size",e.target.value)
+            }}
+            />
+
             <Button preurl={preurl} nexturl={nexturl} list={list} />
         </div>
     )
