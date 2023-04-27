@@ -44,7 +44,7 @@ export default function Video() {
     const [name, setName] = useState("")
     const [preurl, setPreurl] = useState("")
     const [nexturl, setNexturl] = useState("")
-    const [size,setSize]=useState(80)
+    const [size, setSize] = useState(80)
     const [list, setList] = useState([])
 
     useEffect(() => {
@@ -80,7 +80,7 @@ export default function Video() {
             }
         })();
         const size = localStorage.getItem("size")
-        if(size){
+        if (size) {
             setSize(localStorage.getItem("size"))
         }
 
@@ -96,15 +96,31 @@ export default function Video() {
         setNexturl(index < videos.length - 1 ? baseurl + videos[index + 1] : "")
         setList(baseurl)
     }, [videos])
-    console.log(toString(size)+'vh')
+    console.log(toString(size) + 'vh')
     return (
         <div className='video_page'>
-            <h2 className='video_title'>{name}</h2>
+            <div className='video_menu'>
+                <div className='video_titlebox'>
+                    <h2 className='video_title'>{name}</h2>
+                    <Button preurl={preurl} nexturl={nexturl} list={list} />
+                </div>
+                <input
+                    type='range'
+                    min="0"
+                    max="100"
+                    step="1"
+                    value={size}
+                    onChange={e => {
+                        setSize(e.target.value)
+                        localStorage.setItem("size", e.target.value)
+                    }}
+                />
+            </div>
             <div className='player-wrapper'>
                 <ReactPlayer
                     className='react-player'
                     url={url}
-                    width={size.toString()+'vw'}
+                    width={size.toString() + 'vw'}
                     height="auto"
                     playing={false}
                     muted={false}
@@ -113,19 +129,6 @@ export default function Video() {
                     pip={true}
                 />
             </div>
-            <input
-            type='range'
-            min="0"
-            max="100"
-            step="1"
-            value={size}
-            onChange={e=>{
-                setSize(e.target.value)
-                localStorage.setItem("size",e.target.value)
-            }}
-            />
-
-            <Button preurl={preurl} nexturl={nexturl} list={list} />
         </div>
     )
 }

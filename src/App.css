@@ -3,6 +3,13 @@
     top:0;
     bottom: 0;
     width: 100%;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     background-color: #0D1117;
     align-items: center;
+    overflow: scroll;
+}
+
+.App::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
 }
