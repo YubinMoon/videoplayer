@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Video from './component/Video';
 import Main from './component/Main';
 import Nav from './component/Nav';
 

@@ -18,7 +18,9 @@
 }
 
 .video_title {
+    width: 90vw;
     color: white;
+    word-break: break-all;
 }
 
 .player-wrapper {
@@ -32,7 +34,8 @@
 input[type=range] {
     -webkit-appearance: none;
     appearance: none;
-    width: 300px;
+    max-width: 300px;
+    width: 80vw;
     height: 7px;
     border-radius: 4px;
     background: #161B22;
@@ -104,7 +107,13 @@ input[type=range]::-webkit-slider-thumb {
         display: flex;
         align-items: center;
     }
-    .control_box{
+
+    .video_title {
+        width: auto;
+        padding:20px;
+    }
+
+    .control_box {
         margin-left: 3vw;
     }
 }

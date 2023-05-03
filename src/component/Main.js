@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Video from './Video'
 import VideoList from './VideoList';
 import useStore from '../lib/store';
@@ -9,7 +9,7 @@ export default function Main() {
 
     useEffect(() => {
         newPath()
-    }, [])
+    }, [newPath])
 
     if (allowedExtensions.some(ext => path.endsWith(ext))) {
         return (
