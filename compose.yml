@@ -10,5 +10,7 @@ services:
     image: nginx:stable-alpine-slim
     volumes:
       - ./frontend/build:/usr/share/nginx/html
+      - ./video:/usr/share/nginx/video
+      - ./nginx/conf.d:/etc/nginx/conf.d
     ports:
       - 80:80
