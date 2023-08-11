@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  react-build:
+    build: frontend
+    volumes:
+      - './frontend/build:/app/build'
+
+  nginx:
+    image: nginx:stable-alpine-slim
+    volumes:
+      - ./frontend/build:/usr/share/nginx/html
+    ports:
+      - 80:80
